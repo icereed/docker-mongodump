@@ -1,5 +1,5 @@
 FROM mongo:3.2
-MAINTAINER Ilya Stepanov <dev@ilyastepanov.com>
+MAINTAINER icereed (https://github.com/icereed)
 
 RUN apt-get update && \
     apt-get install -y cron && \
