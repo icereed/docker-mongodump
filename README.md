@@ -1,4 +1,4 @@
-istepanov/mongodump
+icereed/mongodump
 ===================
 
 Docker image with mongodump running as a cron task
@@ -11,11 +11,11 @@ Attach a target mongo container to this container and mount a volume to containe
         -v /path/to/target/folder:/backup \ # where to put backups
         -e 'CRON_SCHEDULE=0 1 * * *' \      # cron job schedule
         --link my-mongo-container:mongo \   # linked container with running mongo
-        istepanov/mongodump
+        icereed/mongodump
 
 To run backup once without cron job, add `no-cron` parameter:
 
     docker run --rm \
         -v /path/to/target/folder:/backup \ # where to put backups
         --link my-mongo-container:mongo \   # linked container with running mongo
-        istepanov/mongodump no-cron
+        icereed/mongodump no-cron
